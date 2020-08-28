@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="15.671" tests="4" failures="0" skipped="3">
-  <testsuite name="Root Suite" timestamp="2020-08-16T13:35:35" tests="0" file="tests\e2e\specs\home.spec.js" failures="0" time="0">
-  </testsuite>
-  <testsuite name="Home page is working" timestamp="2020-08-16T13:35:35" tests="4" failures="0" time="15.671">
-    <testcase name="Home page is working Wait for profile" time="15.671" classname="Wait for profile">
-    </testcase>
-  </testsuite>
-</testsuites>
