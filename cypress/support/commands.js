@@ -23,3 +23,31 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+const defaultMockedCall = {
+    name: '',
+    url: '',
+    method: 'GET',
+    responseFixture: 'fixture:responses/empty',
+    status: 200,
+    cookies: [],
+  };
+  Cypress.Commands.add('visitWithMocks', (url, mockedCalls) => {
+    cy.server();
+    (mockedCalls || []).forEach(mock => {
+      const mockedCall = { ...defaultMockedCall, ...mock };
+      (mock.cookies || []).forEach(cookie => {
+        cy.setCookie(cookie.name, cookie.value, {
+          domain: cookie.domain || window.location.hostname,
+        });
+      });
+      console.log(mockedCall);
+      cy.route({
+        method: mockedCall.method,
+        url: mockedCall.url,
+        response: mockedCall.responseFixture,
+        status: mockedCall.status,
+      }).as(mockedCall.name);
+    });
+    cy.visit(url);
+  });
