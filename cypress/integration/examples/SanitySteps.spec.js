@@ -5,7 +5,14 @@ import NgcsPage from '../PageObjects/NgcsPage.js'
 import IngressPage from '../PageObjects/IngressPage.js'
 import AlarmsPage from '../PageObjects/AlarmsPage.js'
 
-describe('verify NG911 app', () => {
+const psapPage = new PsapPage()
+const ngcsPage= new NgcsPage()
+const ingressPage= new IngressPage()
+const alarmsPage= new AlarmsPage()
+
+
+describe('basic sanity for NG911 app', () => {
+
   before(() => {
     cy.fixture('getTokenBackdoor.json').then(json => {
       cy.request('PUT', json.url, {
@@ -34,32 +41,36 @@ describe('verify NG911 app', () => {
     });
 
   it ( 'verify PSAP pages',() => {
-    const pp= new PsapPage()
-    cy.wait(2000)
-    pp.validateListTab()
+    //const pp= new PsapPage()
+    cy.wait(5000)
+    psapPage.validateListTab()
     cy.wait(1000)
-    pp.validateMapTab()
+    psapPage.validateMapTab()
     });
 
   it ( 'verify NGCS pages',() => {
-      const np= new NgcsPage()
       cy.wait(1000)
-      np.verifyAndClickNgcsTab()
+      ngcsPage.verifyAndClickNgcsTab()
       cy.wait(1000)
-      np.verifyNgcsCore()
+      ngcsPage.verifyNgcsCore()
       cy.wait(1000)
-      np.verifyNgcsCoreDevices()
+      ngcsPage.verifyNgcsCoreDevices()
       });
-  it ( 'verify Ingress pages',() => {
-      const ip= new IngressPage()
+  it ( 'verify Ingress pages',() => {     
       cy.wait(1000)
-      ip.verifyAndClickIngressTab() 
+      ingressPage.verifyAndClickIngressTab() 
+      cy.wait(3000)
+      ingressPage.verifyDataTablePresentIngress()
       });
 
-  it ( 'verify Alarms pages',() => {
-      const ap= new AlarmsPage()
+  it ( 'verify Alarms pages',() => {    
       cy.wait(1000)
-      ap.verifyAndClickAlarmsTab()
+      alarmsPage.verifyAndClickAlarmsTab()
+      cy.wait(3000)
+      alarmsPage.verifyDataTablePresentAlarms()
+      //cy.wait(2000)
+      //alarmsPage.verifyTableHeaderWithApi()
+
       });
 
 });
