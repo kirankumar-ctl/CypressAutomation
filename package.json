@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run --config pageLoadTimeout=100000"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kirankumar-ctl/CypressAutomation#readme",
   "devDependencies": {
-    "cypress": "^5.0.0"
+    "cypress": "^5.1.0"
   }
 }
