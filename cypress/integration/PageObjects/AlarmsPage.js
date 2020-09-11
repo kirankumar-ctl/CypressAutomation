@@ -34,10 +34,12 @@ class AlarmsPage{
               let alarmLists = response.body.alarmLists;
         
               alarmLists.forEach((item) => {
+                cy.log(item)
+                cy.log('test api alrams')
                 expect(item).to.have.all.keys(
                   "alarmTimestamp",
                   "device",
-                  "metric1",
+                  "metric",
                   "segment",
                   "threshold",
                   "type"

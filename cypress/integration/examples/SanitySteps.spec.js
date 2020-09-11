@@ -50,6 +50,7 @@ describe('basic sanity for NG911 app', () => {
 
   it ( 'verify NGCS pages',() => {
       cy.wait(1000)
+      cy.log('NGCS TEST')
       ngcsPage.verifyAndClickNgcsTab()
       cy.wait(1000)
       ngcsPage.verifyNgcsCore()
@@ -68,8 +69,8 @@ describe('basic sanity for NG911 app', () => {
       alarmsPage.verifyAndClickAlarmsTab()
       cy.wait(3000)
       alarmsPage.verifyDataTablePresentAlarms()
-      //cy.wait(2000)
-      //alarmsPage.verifyTableHeaderWithApi()
+      cy.wait(2000)
+      alarmsPage.verifyTableHeaderWithApi()
 
       });
 
