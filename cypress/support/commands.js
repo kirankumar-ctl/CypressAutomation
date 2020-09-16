@@ -1,28 +1,7 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+let token = null;
+
+
 
 const defaultMockedCall = {
     name: '',
@@ -32,6 +11,7 @@ const defaultMockedCall = {
     status: 200,
     cookies: [],
   };
+
   Cypress.Commands.add('visitWithMocks', (url, mockedCalls) => {
     cy.server();
     (mockedCalls || []).forEach(mock => {
@@ -51,3 +31,29 @@ const defaultMockedCall = {
     });
     cy.visit(url);
   });
+
+  Cypress.Commands.add('loginNg911',() =>{
+    cy.fixture('getTokenBackdoor.json').then(json => {
+      cy.request('PUT', json.url, {
+        schema: json.schema,
+        uid: json.uid,
+        type: json.type,
+      }).then(response => {
+        token = response.body.access_token;
+        Cypress.env('mytoken', token);
+        const cookieValue = response.body.refresh_token;
+        cy.visitWithMocks('https://nginx-master-po-ng911.kubeodc-test.corp.intranet/ng911/home', [
+          {
+            name: 'HOME',
+            url: 'https://nginx-master-po-ng911.kubeodc-test.corp.intranet/ng911/home',
+            method: 'GET',
+            //responseFixture: 'fixture:psaps.json',
+            status: 200,
+            cookies: [{ name: 'token', value: cookieValue, domain: window.location.hostname }],
+          }
+        ]);
+      });
+    });
+  });
+
+ 

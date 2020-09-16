@@ -11,29 +11,11 @@ const ingressPage= new IngressPage()
 const alarmsPage= new AlarmsPage()
 
 
-describe('basic sanity for NG911 app', () => {
 
+describe('basic sanity for NG911 app', () => {
+  
   before(() => {
-    cy.fixture('getTokenBackdoor.json').then(json => {
-      cy.request('PUT', json.url, {
-        schema: json.schema,
-        uid: json.uid,
-        type: json.type,
-      }).then(response => {
-        const cookieValue = response.body.refresh_token;
-        cy.visitWithMocks('https://nginx-master-po-ng911.kubeodc-test.corp.intranet/ng911/home', [
-          {
-            name: 'HOME',
-            url: 'https://nginx-master-po-ng911.kubeodc-test.corp.intranet/ng911/home',
-            method: 'GET',
-            //responseFixture: 'fixture:psaps.json',
-            status: 200,
-            cookies: [{ name: 'token', value: cookieValue, domain: window.location.hostname }],
-          }
-         
-        ]);
-      });
-    });
+    cy.loginNg911();
   });
 
   it ( 'verify home page',() => {
@@ -41,7 +23,6 @@ describe('basic sanity for NG911 app', () => {
     });
 
   it ( 'verify PSAP pages',() => {
-    //const pp= new PsapPage()
     cy.wait(5000)
     psapPage.validateListTab()
     cy.wait(1000)
@@ -75,5 +56,3 @@ describe('basic sanity for NG911 app', () => {
       });
 
 });
-
-
