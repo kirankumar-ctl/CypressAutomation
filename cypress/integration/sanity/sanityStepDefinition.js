@@ -1,4 +1,4 @@
-import { Given, Then, And, When } from "cypress-cucumber-preprocessor/steps";
+/*import { Given, Then, And, When } from "cypress-cucumber-preprocessor/steps";
 import PsapPage from '../PageObjects/PsapPage.js'
 import NgcsPage from '../PageObjects/NgcsPage.js'
 import IngressPage from '../PageObjects/IngressPage.js'
@@ -38,14 +38,20 @@ When('I will be on home page', () => {
     cy.log('API validation for table header on PSAP page successful');
    });
 
+  Then('I verify card details on PSAP page With API', () => {
+    cy.wait(3000)
+    psapPage.verifyPsapCardDetails()
+    cy.log('PSAP card details validated successful');
+ });
 
-  Then('I verify NgcsCore and NgcsCoreDevices tab on NGCS page', () => {
+  Then('I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page', () => {
     cy.wait(1000)
     ngcsPage.verifyAndClickNgcsTab()
     cy.wait(1000)
     ngcsPage.verifyNgcsCore()
     cy.wait(1000)
     ngcsPage.verifyNgcsCoreDevices()
+    ngcsPage.verifyNgcsComponentStatus()
     cy.log('NGCS page validation successful');
    });
   
@@ -55,13 +61,26 @@ When('I will be on home page', () => {
     cy.log('API validation for table header on NGCS page successful');
    });
 
- Then('I verify data table present on INGRESS page', () => {
+   Then('I verify card details on NGCS page With API', () => {
+    cy.wait(3000)
+    ngcsPage.verifyNgcsCardDetails()
+    cy.log('NGCS card details validated successful');
+ });
+
+ Then('I verify Gateways, SBCs Tabs and data table present on INGRESS page', () => {
     cy.wait(1000)
       ingressPage.verifyAndClickIngressTab() 
       cy.wait(3000)
       ingressPage.verifyDataTablePresentIngress()
-      cy.log('INGRESS page validation successful');
+      ingressPage.verifyIngressGatewaysTab()
+      ingressPage.verifyIngressSBCs()
    });
+ Then('I verify card details on INGRESS page With API', () => {
+      cy.wait(3000)
+      ingressPage.verifyIngressCardDetails()
+      cy.log('INGRESS card details validated successful');
+   });
+
  And('I verify Table Header on INGRESS page With API', () => {
     cy.wait(2000)
     ingressPage.verifyTableHeaderWithApiIngress()
@@ -73,7 +92,7 @@ When('I will be on home page', () => {
       alarmsPage.verifyAndClickAlarmsTab()
       cy.wait(3000)
       alarmsPage.verifyDataTablePresentAlarms()
-      cy.log('INGRESS page validation successful');
+      cy.log('ALARMS page validation successful');
    });
 
  And('I verify Table Header on ALARMS page With API', () => {
@@ -81,3 +100,9 @@ When('I will be on home page', () => {
       alarmsPage.verifyTableHeaderWithApi()
       cy.log('API validation for table header on Alarms page successful');
    });
+
+   Then('I verify card details on ALARMS page With API', () => {
+    cy.wait(3000)
+    alarmsPage.verifyAlarmsCardDetails()
+    cy.log('ALARMS card details validated successful');
+ });*/

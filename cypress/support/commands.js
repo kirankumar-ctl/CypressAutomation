@@ -1,6 +1,6 @@
 
 let token = null;
-
+let ingCount=null;
 
 
 const defaultMockedCall = {
@@ -55,5 +55,3 @@ const defaultMockedCall = {
       });
     });
   });
-
- 
