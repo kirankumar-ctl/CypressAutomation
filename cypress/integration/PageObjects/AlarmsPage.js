@@ -54,7 +54,7 @@ class AlarmsPage{
             followRedirect: false,
             log: true,
             url:
-              "https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1",
+              "https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms",
             headers: {
               accept: "application/json",
               Authorization: "Bearer " + mtoken,
