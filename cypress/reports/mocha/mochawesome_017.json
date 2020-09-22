@@ -1,0 +1,188 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-22T12:34:12.266Z",
+    "end": "2020-09-22T12:35:43.230Z",
+    "duration": 90964,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9eea545-0637-424c-bdfc-f130aced65fc",
+      "title": "",
+      "fullFile": "cypress\\integration\\sanity.feature",
+      "file": "cypress\\integration\\sanity.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7029555-5db1-4ee2-9cae-6cc2a44d4574",
+          "title": "NG911 automation sanity",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login in NG911 app and validate home page",
+              "fullTitle": "NG911 automation sanity Login in NG911 app and validate home page",
+              "timedOut": null,
+              "duration": 27754,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "489b9eb7-afa5-4936-b24e-7a4fb15ed9a7",
+              "parentUUID": "e7029555-5db1-4ee2-9cae-6cc2a44d4574",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate PSAP page and there APIs",
+              "fullTitle": "NG911 automation sanity validate PSAP page and there APIs",
+              "timedOut": null,
+              "duration": 22305,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "546534d2-d0bd-4df9-b5c3-d6d42414e1fd",
+              "parentUUID": "e7029555-5db1-4ee2-9cae-6cc2a44d4574",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate NGCS page and there APIs",
+              "fullTitle": "NG911 automation sanity validate NGCS page and there APIs",
+              "timedOut": null,
+              "duration": 10421,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "dbaae4b0-163d-4ac4-b779-b0501a76438b",
+              "parentUUID": "e7029555-5db1-4ee2-9cae-6cc2a44d4574",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate INGRESS page and there APIs",
+              "fullTitle": "NG911 automation sanity validate INGRESS page and there APIs",
+              "timedOut": null,
+              "duration": 10630,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "52ab2546-e46a-4f39-8106-61c2dc6f7706",
+              "parentUUID": "e7029555-5db1-4ee2-9cae-6cc2a44d4574",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate ALARMS page and there APIs",
+              "fullTitle": "NG911 automation sanity validate ALARMS page and there APIs",
+              "timedOut": null,
+              "duration": 8591,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"accept\": \"application/json\",\n  \"Authorization\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjdmNTRkMjcxLTU5N2YtNDQ3ZS04YzJlLTRiYTY4MjU1YmMzMSJ9.eyJpc3MiOiJBUFBLRVk3NTY3NTIwMjAwMTEwMTU1OTQ5NTg2MTExMjc0IiwiZW50ZXJwcmlzZSI6Ijk0ODEiLCJqdGkiOiIzZTA0MjYyZC0zYjFlLTQ4ZGMtYmFlYy1mN2NmMGE1MzgwNmYiLCJzdWIiOiJrb2hsc0BlbnYxLmNvbSIsInVzZXJuYW1lIjoia29obHNAZW52MS5jb20iLCJuYW1lIjoiS29obHMgS29obHMiLCJhY2Nlc3NfdHlwZSI6ImFjY2Vzc190b2tlbiIsImVudiI6ImVudjEiLCJ1aWQiOiIxMTkxNTkyMSIsInR5cGUiOiJlbnRlcnByaXNlIiwiaWF0IjoxNjAwNzc4MDYyLCJleHAiOjE2MDA3NzgzNjJ9.cFa-RjWaD9_KFGjb3tWshFBxbqYHR32vF60P9pmR5K0qTsj37afYe8n2YWMBYDDx-_5pA89Yn2ljBTYwMaeoyXethdASWRu9Ps1fhpEfE9uY9NpHJeW-D1G1QX8BcT3Dm6Aos5SFh3X7GHyRNn4wxoyQJ4EhUlUlPpaR5oV8JDyX_8dqhh4FGlfQPBhKUkikY4C_6v2wJmt8qSKpuW0U0-eYK2UIYypVO5_yLhvqmKcVQpp2uAN6h_ImmJoI6qcqNf-Ymn-MA_PTrnPMRt62mW_1Rzsy6P0scOtAEStn_izbB6tH4MMV2s5CPv2nTlJZ_DNrO7O1WkhOhmml4oCK_IYXLnfCX6uHEaI5ScSCF5CmLR_bQ4S_sJVNO9dtDsJM0QTpfYZIjcoEP3zSSBmrSN3Kagoadx3ZWQCAyAlO3HNysAP1yItDDPcd85oUsgVLd9z4JxdPs_PIYOUZbnzlExMH6KWZZ5pucbTDGHZexwMwR_jYp1Xk_r2PpoAyJNO4MiUPzQ61ErcjRDK2V9W27e9aBul89ZNDCzTwYn0brCruGk9MvlllcY8QeWuAm6fd6_fqtguedGvcsPRoxveq5eTY4HpdWWa-v_XrAYbK6IC-rehfgXDN7mb2wmaDa0fP0Mkxzk9zVZHtc-XsHqjwYkpraO3sJxPB9zmQXs41RDc\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.1.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Tue, 22 Sep 2020 12:35:42 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"nginx/1.17.6\",\n  \"vary\": \"Origin, Access-Control-Request-Method, Access-Control-Request-Headers\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"x-level3-mediation-id\": \"ME-apigeeidc17test6132176708717\",\n  \"access-control-allow-origin\": \"*\",\n  \"trackingid\": \"7d1c4210-3667-af12-3bdc-ccd6ae756e46\"\n}\nBody: {\n  \"timestamp\": 1600778142242,\n  \"status\": 404,\n  \"error\": \"Not Found\",\n  \"message\": \"\",\n  \"path\": \"/api/v1/alarms1\"\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"accept\": \"application/json\",\n  \"Authorization\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjdmNTRkMjcxLTU5N2YtNDQ3ZS04YzJlLTRiYTY4MjU1YmMzMSJ9.eyJpc3MiOiJBUFBLRVk3NTY3NTIwMjAwMTEwMTU1OTQ5NTg2MTExMjc0IiwiZW50ZXJwcmlzZSI6Ijk0ODEiLCJqdGkiOiIzZTA0MjYyZC0zYjFlLTQ4ZGMtYmFlYy1mN2NmMGE1MzgwNmYiLCJzdWIiOiJrb2hsc0BlbnYxLmNvbSIsInVzZXJuYW1lIjoia29obHNAZW52MS5jb20iLCJuYW1lIjoiS29obHMgS29obHMiLCJhY2Nlc3NfdHlwZSI6ImFjY2Vzc190b2tlbiIsImVudiI6ImVudjEiLCJ1aWQiOiIxMTkxNTkyMSIsInR5cGUiOiJlbnRlcnByaXNlIiwiaWF0IjoxNjAwNzc4MDYyLCJleHAiOjE2MDA3NzgzNjJ9.cFa-RjWaD9_KFGjb3tWshFBxbqYHR32vF60P9pmR5K0qTsj37afYe8n2YWMBYDDx-_5pA89Yn2ljBTYwMaeoyXethdASWRu9Ps1fhpEfE9uY9NpHJeW-D1G1QX8BcT3Dm6Aos5SFh3X7GHyRNn4wxoyQJ4EhUlUlPpaR5oV8JDyX_8dqhh4FGlfQPBhKUkikY4C_6v2wJmt8qSKpuW0U0-eYK2UIYypVO5_yLhvqmKcVQpp2uAN6h_ImmJoI6qcqNf-Ymn-MA_PTrnPMRt62mW_1Rzsy6P0scOtAEStn_izbB6tH4MMV2s5CPv2nTlJZ_DNrO7O1WkhOhmml4oCK_IYXLnfCX6uHEaI5ScSCF5CmLR_bQ4S_sJVNO9dtDsJM0QTpfYZIjcoEP3zSSBmrSN3Kagoadx3ZWQCAyAlO3HNysAP1yItDDPcd85oUsgVLd9z4JxdPs_PIYOUZbnzlExMH6KWZZ5pucbTDGHZexwMwR_jYp1Xk_r2PpoAyJNO4MiUPzQ61ErcjRDK2V9W27e9aBul89ZNDCzTwYn0brCruGk9MvlllcY8QeWuAm6fd6_fqtguedGvcsPRoxveq5eTY4HpdWWa-v_XrAYbK6IC-rehfgXDN7mb2wmaDa0fP0Mkxzk9zVZHtc-XsHqjwYkpraO3sJxPB9zmQXs41RDc\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.1.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Tue, 22 Sep 2020 12:35:42 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"nginx/1.17.6\",\n  \"vary\": \"Origin, Access-Control-Request-Method, Access-Control-Request-Headers\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"x-level3-mediation-id\": \"ME-apigeeidc17test6132176708717\",\n  \"access-control-allow-origin\": \"*\",\n  \"trackingid\": \"7d1c4210-3667-af12-3bdc-ccd6ae756e46\"\n}\nBody: {\n  \"timestamp\": 1600778142242,\n  \"status\": 404,\n  \"error\": \"Not Found\",\n  \"message\": \"\",\n  \"path\": \"/api/v1/alarms1\"\n}\n\n\nhttps://on.cypress.io/request\n    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:159172:21\n    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8442:18)\n    at _drainQueueStep (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:61:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:613:14)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11115:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10457:35)\nFrom Your Spec Code:\n    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:61:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:613:14)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11115:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10457:35)",
+                "diff": null
+              },
+              "uuid": "2db2a584-73e3-4491-b70a-d79ec8d5849a",
+              "parentUUID": "e7029555-5db1-4ee2-9cae-6cc2a44d4574",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "489b9eb7-afa5-4936-b24e-7a4fb15ed9a7",
+            "546534d2-d0bd-4df9-b5c3-d6d42414e1fd",
+            "dbaae4b0-163d-4ac4-b779-b0501a76438b",
+            "52ab2546-e46a-4f39-8106-61c2dc6f7706"
+          ],
+          "failures": [
+            "2db2a584-73e3-4491-b70a-d79ec8d5849a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 79701,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

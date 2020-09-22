@@ -1,0 +1,232 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "NG911 automation sanity",
+    "line": 2,
+    "id": "ng911-automation-sanity",
+    "tags": [
+      {
+        "name": "@ng911sanity",
+        "line": 1
+      }
+    ],
+    "uri": "sanity.feature",
+    "elements": [
+      {
+        "id": "ng911-automation-sanity;login-in-ng911-app-and-validate-home-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login in NG911 app and validate home page",
+        "tags": [
+          {
+            "name": "@ng911sanity",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open NG911 login page",
+            "result": {
+              "status": "passed",
+              "duration": 19710000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I will be on home page",
+            "result": {
+              "status": "passed",
+              "duration": 8131000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ng911-automation-sanity;validate-psap-page-and-there-apis",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "validate PSAP page and there APIs",
+        "tags": [
+          {
+            "name": "@ng911sanity",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I verify List and Map tab on PSAP page",
+            "result": {
+              "status": "passed",
+              "duration": 9512000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I verify card details on PSAP page With API",
+            "result": {
+              "status": "passed",
+              "duration": 9430000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I verify Table Header on PSAP page With API",
+            "result": {
+              "status": "passed",
+              "duration": 3398000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ng911-automation-sanity;validate-ngcs-page-and-there-apis",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "validate NGCS page and there APIs",
+        "tags": [
+          {
+            "name": "@ng911sanity",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page",
+            "result": {
+              "status": "passed",
+              "duration": 4017000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I verify card details on NGCS page With API",
+            "result": {
+              "status": "passed",
+              "duration": 3655000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I verify Table Header on NGCS page With API",
+            "result": {
+              "status": "passed",
+              "duration": 3266000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ng911-automation-sanity;validate-ingress-page-and-there-apis",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "validate INGRESS page and there APIs",
+        "tags": [
+          {
+            "name": "@ng911sanity",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I verify Gateways, SBCs Tabs and data table present on INGRESS page",
+            "result": {
+              "status": "passed",
+              "duration": 4618000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I verify card details on INGRESS page With API",
+            "result": {
+              "status": "passed",
+              "duration": 3567000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I verify Table Header on INGRESS page With API",
+            "result": {
+              "status": "passed",
+              "duration": 2478000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "ng911-automation-sanity;validate-alarms-page-and-there-apis",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "validate ALARMS page and there APIs",
+        "tags": [
+          {
+            "name": "@ng911sanity",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I verify data table present on ALARMS page",
+            "result": {
+              "status": "passed",
+              "duration": 4489000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I verify card details on ALARMS page With API",
+            "result": {
+              "status": "failed",
+              "duration": 3624000000,
+              "error_message": "CypressError: `cy.request()` failed on:\n\nhttps://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"accept\": \"application/json\",\n  \"Authorization\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjdmNTRkMjcxLTU5N2YtNDQ3ZS04YzJlLTRiYTY4MjU1YmMzMSJ9.eyJpc3MiOiJBUFBLRVk3NTY3NTIwMjAwMTEwMTU1OTQ5NTg2MTExMjc0IiwiZW50ZXJwcmlzZSI6Ijk0ODEiLCJqdGkiOiIzZTA0MjYyZC0zYjFlLTQ4ZGMtYmFlYy1mN2NmMGE1MzgwNmYiLCJzdWIiOiJrb2hsc0BlbnYxLmNvbSIsInVzZXJuYW1lIjoia29obHNAZW52MS5jb20iLCJuYW1lIjoiS29obHMgS29obHMiLCJhY2Nlc3NfdHlwZSI6ImFjY2Vzc190b2tlbiIsImVudiI6ImVudjEiLCJ1aWQiOiIxMTkxNTkyMSIsInR5cGUiOiJlbnRlcnByaXNlIiwiaWF0IjoxNjAwNzc4MDYyLCJleHAiOjE2MDA3NzgzNjJ9.cFa-RjWaD9_KFGjb3tWshFBxbqYHR32vF60P9pmR5K0qTsj37afYe8n2YWMBYDDx-_5pA89Yn2ljBTYwMaeoyXethdASWRu9Ps1fhpEfE9uY9NpHJeW-D1G1QX8BcT3Dm6Aos5SFh3X7GHyRNn4wxoyQJ4EhUlUlPpaR5oV8JDyX_8dqhh4FGlfQPBhKUkikY4C_6v2wJmt8qSKpuW0U0-eYK2UIYypVO5_yLhvqmKcVQpp2uAN6h_ImmJoI6qcqNf-Ymn-MA_PTrnPMRt62mW_1Rzsy6P0scOtAEStn_izbB6tH4MMV2s5CPv2nTlJZ_DNrO7O1WkhOhmml4oCK_IYXLnfCX6uHEaI5ScSCF5CmLR_bQ4S_sJVNO9dtDsJM0QTpfYZIjcoEP3zSSBmrSN3Kagoadx3ZWQCAyAlO3HNysAP1yItDDPcd85oUsgVLd9z4JxdPs_PIYOUZbnzlExMH6KWZZ5pucbTDGHZexwMwR_jYp1Xk_r2PpoAyJNO4MiUPzQ61ErcjRDK2V9W27e9aBul89ZNDCzTwYn0brCruGk9MvlllcY8QeWuAm6fd6_fqtguedGvcsPRoxveq5eTY4HpdWWa-v_XrAYbK6IC-rehfgXDN7mb2wmaDa0fP0Mkxzk9zVZHtc-XsHqjwYkpraO3sJxPB9zmQXs41RDc\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.1.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Tue, 22 Sep 2020 12:35:42 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"nginx/1.17.6\",\n  \"vary\": \"Origin, Access-Control-Request-Method, Access-Control-Request-Headers\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"x-level3-mediation-id\": \"ME-apigeeidc17test6132176708717\",\n  \"access-control-allow-origin\": \"*\",\n  \"trackingid\": \"7d1c4210-3667-af12-3bdc-ccd6ae756e46\"\n}\nBody: {\n  \"timestamp\": 1600778142242,\n  \"status\": 404,\n  \"error\": \"Not Found\",\n  \"message\": \"\",\n  \"path\": \"/api/v1/alarms1\"\n}\n\n\nhttps://on.cypress.io/request\n    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:159172:21\n    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8442:18)\n    at _drainQueueStep (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:61:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:613:14)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11115:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10457:35)\nFrom Your Spec Code:\n    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:61:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:613:14)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11115:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10457:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I verify Table Header on ALARMS page With API",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
