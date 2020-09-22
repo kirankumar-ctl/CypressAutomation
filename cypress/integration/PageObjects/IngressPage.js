@@ -45,6 +45,7 @@ class IngressPage{
       cy.get('#ingress-list-tab > li:nth-child(2) > a:nth-child(1)').should('be.visible').contains('SBCs');
       cy.log('SBCs tab is visible');
   }
+  
     verifyDataTablePresentIngress()
     {
         cy.get('#list-section > div > div > div > div > div:nth-child(2)').should('be.visible');

@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 1,
-    "start": "2020-09-21T16:08:42.133Z",
-    "end": "2020-09-21T16:08:42.133Z",
-    "duration": 149539,
+    "start": "2020-09-21T16:37:02.378Z",
+    "end": "2020-09-21T16:39:44.342Z",
+    "duration": 161964,
     "testsRegistered": 5,
     "passPercent": 80,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5f443153-f0f3-4e66-b02f-6e9e3d10e658",
+      "uuid": "a1a5f973-f6b8-4f07-8212-3d646bf8ad48",
       "title": "",
       "fullFile": "cypress\\integration\\sanity.feature",
       "file": "cypress\\integration\\sanity.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5c3f63d8-3187-4167-be49-1386c0e52f79",
+          "uuid": "782f7bfe-aade-44b8-9349-3ae25156199d",
           "title": "NG911 automation sanity",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login in NG911 app and validate home page",
               "fullTitle": "NG911 automation sanity Login in NG911 app and validate home page",
               "timedOut": null,
-              "duration": 29148,
+              "duration": 29290,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "2f10fe0c-fdb1-44bc-943a-9fa2511aff58",
-              "parentUUID": "5c3f63d8-3187-4167-be49-1386c0e52f79",
+              "uuid": "6e089b8b-56cf-4972-8d55-4a98b53fd9a0",
+              "parentUUID": "782f7bfe-aade-44b8-9349-3ae25156199d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "validate PSAP page and there APIs",
               "fullTitle": "NG911 automation sanity validate PSAP page and there APIs",
               "timedOut": null,
-              "duration": 19711,
+              "duration": 24497,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "2cff430f-027c-46e0-a2e0-b393ac35db41",
-              "parentUUID": "5c3f63d8-3187-4167-be49-1386c0e52f79",
+              "uuid": "72eb7bc9-40c2-428a-9b39-8ad76b0d8790",
+              "parentUUID": "782f7bfe-aade-44b8-9349-3ae25156199d",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "validate NGCS page and there APIs",
               "fullTitle": "NG911 automation sanity validate NGCS page and there APIs",
               "timedOut": null,
-              "duration": 74353,
+              "duration": 73957,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -87,8 +87,8 @@
                 "estack": "AssertionError: Timed out retrying: Expected to find content: 'Component Status1' within the element: <a.-p--0.-pb--2> but never did.\n    at NgcsPage.verifyNgcsComponentStatus (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:286:61)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:680:12)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11115:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10457:35)",
                 "diff": null
               },
-              "uuid": "139e7e93-3559-4fb8-beca-7189b3460122",
-              "parentUUID": "5c3f63d8-3187-4167-be49-1386c0e52f79",
+              "uuid": "9136bd11-1316-448c-a0a0-222108c10e00",
+              "parentUUID": "782f7bfe-aade-44b8-9349-3ae25156199d",
               "isHook": false,
               "skipped": false
             },
@@ -96,7 +96,7 @@
               "title": "validate INGRESS page and there APIs",
               "fullTitle": "NG911 automation sanity validate INGRESS page and there APIs",
               "timedOut": null,
-              "duration": 11310,
+              "duration": 11179,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,8 +105,8 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "2b58e5db-3cc6-4aef-8b58-2574e675b64f",
-              "parentUUID": "5c3f63d8-3187-4167-be49-1386c0e52f79",
+              "uuid": "e19a01f0-bfbc-40e7-b50d-b62f0e1299de",
+              "parentUUID": "782f7bfe-aade-44b8-9349-3ae25156199d",
               "isHook": false,
               "skipped": false
             },
@@ -114,7 +114,7 @@
               "title": "validate ALARMS page and there APIs",
               "fullTitle": "NG911 automation sanity validate ALARMS page and there APIs",
               "timedOut": null,
-              "duration": 15017,
+              "duration": 12925,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -123,25 +123,25 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "bbbae017-5cf8-41df-af61-ec59603821a0",
-              "parentUUID": "5c3f63d8-3187-4167-be49-1386c0e52f79",
+              "uuid": "1090d24b-eb1c-4a35-b0f6-11aea5aa7bad",
+              "parentUUID": "782f7bfe-aade-44b8-9349-3ae25156199d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2f10fe0c-fdb1-44bc-943a-9fa2511aff58",
-            "2cff430f-027c-46e0-a2e0-b393ac35db41",
-            "2b58e5db-3cc6-4aef-8b58-2574e675b64f",
-            "bbbae017-5cf8-41df-af61-ec59603821a0"
+            "6e089b8b-56cf-4972-8d55-4a98b53fd9a0",
+            "72eb7bc9-40c2-428a-9b39-8ad76b0d8790",
+            "e19a01f0-bfbc-40e7-b50d-b62f0e1299de",
+            "1090d24b-eb1c-4a35-b0f6-11aea5aa7bad"
           ],
           "failures": [
-            "139e7e93-3559-4fb8-beca-7189b3460122"
+            "9136bd11-1316-448c-a0a0-222108c10e00"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 149539,
+          "duration": 151848,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

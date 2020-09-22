@@ -14,5 +14,14 @@
             "html": true,
             "json": true
         }
-    }
+    },
+
+    "cucumberautocomplete.steps": [
+        "cypress/integration/sanity/*.steps.js"   
+    ],
+    "cucumberautocomplete.syncfeatures": "**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": false
 }
+

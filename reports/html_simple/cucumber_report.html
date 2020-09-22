@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style type="text/css">
+      .panel-heading {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.panel-heading a {
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.panel-heading i.glyphicon-chevron-down {
+    display: none;
+}
+
+.panel-heading i.glyphicon-chevron-right {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-down {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-right {
+    display: none;
+}
+
+.generated-on {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.panel-title b {
+    padding-right: 10px;
+}
+
+.panel-heading .label-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.panel-heading .label-container label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.navbar .label-container {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .label {
+    font-size: 20px;
+}
+
+.navbar .project-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tags {
+    margin-left: 18px;
+    margin-right: 20px;
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+
+.tag {
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.chart {
+    padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+    fill: #f5f5f5;
+}
+
+.arguments {
+    margin-left: 30px;
+    margin-top: 1em;
+    margin-bottom: 15px;
+}
+
+#directory {
+    background-color: #f0f0f0;
+}
+
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
+.description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.6;
+    color: #6f6f6f;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.info {
+    background-color: #fbfbfb;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    margin-right: 3em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.step-duration {
+    float: right;
+    color: #BDBDBD;
+}
+
+.footer-div {
+    text-align: right;
+    vertical-align: middle;
+    height: 3.5%;
+    width: 100%;
+}
+
+.footer-container {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 18%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.show-modal:hover {
+    background-color: #f0f0f0;
+}
+
+.footer-link {
+    font-size: 13px;
+    float: right;
+}
+
+.footer-link:hover {
+    color: darkgray;
+}
+
+.steps {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -4px;
+}
+
+.all-features {
+    padding-top: 0.6em;
+}
+
+.keyword {
+    color: #616161;
+}
+
+.feature-passed {
+    display: block;
+}
+
+.feature-failed{
+    display: block;
+}
+
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        
+          <a class="navbar-brand">Cucumberjs Report</a>
+          <div class="project-name visible-md visible-lg">cypressautomation</div>
+          <div class="label-container">
+            <span class="label label-success" onclick="toggle('.feature-passed')" title=scenarios>Passed: 4</span>
+            <span class="label label-danger" onclick="toggle('.feature-failed')" title=scenarios>Failed: 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Tue Sep 22 2020 17:27:21 GMT+0530 (India Standard Time)</div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#logOutput">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <b>Metadata</b>
+            </a>
+          </h4>
+        </div>
+        <div id="logOutput" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="row">
+              
+             
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> App Version: </strong>5.1.0 
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Test Environment: </strong>Env1
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Browser: </strong>Electron 83
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Platform: </strong>Windows 10
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Parallel: </strong>NA
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Executed: </strong>Local
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+
+<div class="row" xmlns="http://www.w3.org/1999/html">
+
+
+<div class="feature-failed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@ng911sanity</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeaturecypressautomation63a66f31-4ed3-4f36-9501-38e98de8a5f5">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>NG911 automation sanity
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="4 Scenarios Passed">4</span>
+              <span class="label label-danger"
+                                                         title="1 Scenarios Failed">1</span>
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeaturecypressautomation63a66f31-4ed3-4f36-9501-38e98de8a5f5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenariocypressautomation66515f41-df27-432d-a647-ed91830edae7">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Login in NG911 app and validate home page
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="2 Steps Passed">2</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenariocypressautomation66515f41-df27-432d-a647-ed91830edae7"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> I open NG911 login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               18s 274ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> I will be on home page</span>
+                            
+                          
+                              <span class="step-duration">
+                               8s 167ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenariocypressautomation841dfa84-b7d2-4f23-a1ae-2fd3c2d58a3b">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>validate PSAP page and there APIs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="3 Steps Passed">3</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenariocypressautomation841dfa84-b7d2-4f23-a1ae-2fd3c2d58a3b"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I verify List and Map tab on PSAP page</span>
+                            
+                          
+                              <span class="step-duration">
+                               9s 930ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify card details on PSAP page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               5s 521ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify Table Header on PSAP page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               5s 180ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenariocypressautomationefcfeb78-0415-49c4-9950-3eafe84942ca">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>validate NGCS page and there APIs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="3 Steps Passed">3</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenariocypressautomationefcfeb78-0415-49c4-9950-3eafe84942ca"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page</span>
+                            
+                          
+                              <span class="step-duration">
+                               3s 941ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify card details on NGCS page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               3s 771ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify Table Header on NGCS page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 511ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenariocypressautomatione4d20a93-81c3-41ad-b0e1-9ae38614969e">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>validate INGRESS page and there APIs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="3 Steps Passed">3</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenariocypressautomatione4d20a93-81c3-41ad-b0e1-9ae38614969e"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I verify Gateways, SBCs Tabs and data table present on INGRESS page</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 665ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify card details on INGRESS page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 125ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify Table Header on INGRESS page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               2s 515ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenariocypressautomationc4f44b59-887b-48c2-ab3d-6c5ddba586e6">
+                                    <div>
+
+                                        <div style="padding-right: 70px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>validate ALARMS page and there APIs
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="1 Steps Passed">1</span>
+                              
+                              
+                              <span class="label label-warning"
+                                                                title="1 Steps Skipped">1</span>
+                              <span class="label label-danger"
+                                                               title="1 Steps Failed">1</span>
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenariocypressautomationc4f44b59-887b-48c2-ab3d-6c5ddba586e6"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> I verify data table present on ALARMS page</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 516ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-danger" title="Failed"><i
+                                            class="glyphicon glyphicon-remove"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify card details on ALARMS page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               4s 419ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+                                    <a href="#error0_41"
+                                       data-toggle="collapse" class="toggle">Show Error +</a>
+                                    <div id="error0_41"
+                                         class="collapse">
+                                        <pre class="info show-modal"
+                                             data-toggle="modal"
+                                             style="cursor: pointer"
+                                             data-target="#error-modal-0_41">
+                                            <br> CypressError: `cy.request()` failed on:
+
+https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1
+
+The response we received from your web server was:
+
+  ) 404: Not Found
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1
+Headers: {
+  "Connection": "keep-alive",
+  "accept": "application/json",
+  "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjdmNTRkMjcxLTU5N2YtNDQ3ZS04YzJlLTRiYTY4MjU1YmMzMSJ9.eyJpc3MiOiJBUFBLRVk3NTY3NTIwMjAwMTEwMTU1OTQ5NTg2MTExMjc0IiwiZW50ZXJwcmlzZSI6Ijk0ODEiLCJqdGkiOiIxMTIxNDJkYy0wNmQzLTQ5ZTQtYTc5Yy02MzU2NzU4ZDMyYmUiLCJzdWIiOiJrb2hsc0BlbnYxLmNvbSIsInVzZXJuYW1lIjoia29obHNAZW52MS5jb20iLCJuYW1lIjoiS29obHMgS29obHMiLCJhY2Nlc3NfdHlwZSI6ImFjY2Vzc190b2tlbiIsImVudiI6ImVudjEiLCJ1aWQiOiIxMTkxNTkyMSIsInR5cGUiOiJlbnRlcnByaXNlIiwiaWF0IjoxNjAwNzc1NzIzLCJleHAiOjE2MDA3NzYwMjN9.LvnWnVr9ts3HU4esN5EWkA_Tbi9zmP3lOOimGrw2jNYPSE_49otBEaoGVYukdIaI6HiWzyMABA-bXCyOKJFgo7rlqdFyHKnOoaQXWhBzYqbwcTk0LuaVEQnS3aVns3YXEATSrc0oq1BiQwBu7i6IAGUKSvg1qzDMinDrmGb_iwRjGMlNNJbXf7WogIFKJkCVyfza_t8kpSKdKtwu9haRsmWBP-sK4wFGdyvPA5nmIxxD_Im9JfWhWoAmDI9PY9VK47Rou20-gF_Od9J1ffeRTpT9bzaEqHxLoe47S4e_hzLgEL_qBABbR0wWvxHgeod5xcbbywbUDm6yz2rj1auGVmd18Rkq7aLhPIBpUdlTV9VzSqJucX-oHahaxf-5mf2tFnvvgrRHf_hz860fk7negM8CYQhIQ80um25D9MkXrgZU9ZybdHrJ9p4hhMmj1QocreYBNT7XGtqLmobCGkPE52p1Ti194yWj5xV0GqaUAxaFvch8Z-tzFymcHPlAj4n6IoRALZ-VDTyuNRSJ1-o2L7TAuVtKZtIhFqZgrThL4YLPnhotY00wYlFC0emEa32dTiARgnrjNAV8kj0L868hSBctD7YUUXHTE-_vVWdVD_uOda1y2ea9D-3BC8dj0r9QZfEgR7s_ViucI9WyPs0AMll0j3ptyieix4uLyw_OH-g",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.1.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36",
+  "accept-encoding": "gzip, deflate"
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 404 - Not Found
+Headers: {
+  "date": "Tue, 22 Sep 2020 11:56:40 GMT",
+  "content-type": "application/json",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "server": "nginx/1.17.6",
+  "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+  "x-content-type-options": "nosniff",
+  "x-xss-protection": "1; mode=block",
+  "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+  "pragma": "no-cache",
+  "expires": "0",
+  "x-frame-options": "DENY",
+  "x-level3-mediation-id": "ME-apigeeidc16test8370176718044",
+  "access-control-allow-origin": "*",
+  "trackingid": "ed0dd936-c7d6-bf74-5919-1b51a0acf2f9"
+}
+Body: {
+  "timestamp": 1600775800048,
+  "status": 404,
+  "error": "Not Found",
+  "message": "",
+  "path": "/api/v1/alarms1"
+}
+
+
+https://on.cypress.io/request
+    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:159172:21
+    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)
+    at Promise._settlePromiseFromHandler (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8260:31)
+    at Promise._settlePromise (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8317:18)
+    at Promise._settlePromise0 (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8362:10)
+    at Promise._settlePromises (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8442:18)
+    at _drainQueueStep (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5032:12)
+    at _drainQueue (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5025:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5041:5)
+    at Async.drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:4911:14)
+From Your Spec Code:
+    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:61:10)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:613:14)
+    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:11115:9)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:10457:35)
+From Your Spec Code:
+    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:61:10)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:613:14)
+    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:11115:9)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:10457:35)</pre>
+                                    </div>
+
+                                <div class="modal fade" id="error-modal-0_41" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="error-modal-title">
+                                                    Error
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>CypressError: `cy.request()` failed on:
+
+https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1
+
+The response we received from your web server was:
+
+  ) 404: Not Found
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/alarms1
+Headers: {
+  "Connection": "keep-alive",
+  "accept": "application/json",
+  "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjdmNTRkMjcxLTU5N2YtNDQ3ZS04YzJlLTRiYTY4MjU1YmMzMSJ9.eyJpc3MiOiJBUFBLRVk3NTY3NTIwMjAwMTEwMTU1OTQ5NTg2MTExMjc0IiwiZW50ZXJwcmlzZSI6Ijk0ODEiLCJqdGkiOiIxMTIxNDJkYy0wNmQzLTQ5ZTQtYTc5Yy02MzU2NzU4ZDMyYmUiLCJzdWIiOiJrb2hsc0BlbnYxLmNvbSIsInVzZXJuYW1lIjoia29obHNAZW52MS5jb20iLCJuYW1lIjoiS29obHMgS29obHMiLCJhY2Nlc3NfdHlwZSI6ImFjY2Vzc190b2tlbiIsImVudiI6ImVudjEiLCJ1aWQiOiIxMTkxNTkyMSIsInR5cGUiOiJlbnRlcnByaXNlIiwiaWF0IjoxNjAwNzc1NzIzLCJleHAiOjE2MDA3NzYwMjN9.LvnWnVr9ts3HU4esN5EWkA_Tbi9zmP3lOOimGrw2jNYPSE_49otBEaoGVYukdIaI6HiWzyMABA-bXCyOKJFgo7rlqdFyHKnOoaQXWhBzYqbwcTk0LuaVEQnS3aVns3YXEATSrc0oq1BiQwBu7i6IAGUKSvg1qzDMinDrmGb_iwRjGMlNNJbXf7WogIFKJkCVyfza_t8kpSKdKtwu9haRsmWBP-sK4wFGdyvPA5nmIxxD_Im9JfWhWoAmDI9PY9VK47Rou20-gF_Od9J1ffeRTpT9bzaEqHxLoe47S4e_hzLgEL_qBABbR0wWvxHgeod5xcbbywbUDm6yz2rj1auGVmd18Rkq7aLhPIBpUdlTV9VzSqJucX-oHahaxf-5mf2tFnvvgrRHf_hz860fk7negM8CYQhIQ80um25D9MkXrgZU9ZybdHrJ9p4hhMmj1QocreYBNT7XGtqLmobCGkPE52p1Ti194yWj5xV0GqaUAxaFvch8Z-tzFymcHPlAj4n6IoRALZ-VDTyuNRSJ1-o2L7TAuVtKZtIhFqZgrThL4YLPnhotY00wYlFC0emEa32dTiARgnrjNAV8kj0L868hSBctD7YUUXHTE-_vVWdVD_uOda1y2ea9D-3BC8dj0r9QZfEgR7s_ViucI9WyPs0AMll0j3ptyieix4uLyw_OH-g",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.1.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36",
+  "accept-encoding": "gzip, deflate"
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 404 - Not Found
+Headers: {
+  "date": "Tue, 22 Sep 2020 11:56:40 GMT",
+  "content-type": "application/json",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "server": "nginx/1.17.6",
+  "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+  "x-content-type-options": "nosniff",
+  "x-xss-protection": "1; mode=block",
+  "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+  "pragma": "no-cache",
+  "expires": "0",
+  "x-frame-options": "DENY",
+  "x-level3-mediation-id": "ME-apigeeidc16test8370176718044",
+  "access-control-allow-origin": "*",
+  "trackingid": "ed0dd936-c7d6-bf74-5919-1b51a0acf2f9"
+}
+Body: {
+  "timestamp": 1600775800048,
+  "status": 404,
+  "error": "Not Found",
+  "message": "",
+  "path": "/api/v1/alarms1"
+}
+
+
+https://on.cypress.io/request
+    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:159172:21
+    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)
+    at Promise._settlePromiseFromHandler (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8260:31)
+    at Promise._settlePromise (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8317:18)
+    at Promise._settlePromise0 (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8362:10)
+    at Promise._settlePromises (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8442:18)
+    at _drainQueueStep (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5032:12)
+    at _drainQueue (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5025:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5041:5)
+    at Async.drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:4911:14)
+From Your Spec Code:
+    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:61:10)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:613:14)
+    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:11115:9)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:10457:35)
+From Your Spec Code:
+    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:61:10)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:613:14)
+    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:11115:9)
+    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\integration\sanity.feature:10457:35)</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> I verify Table Header on ALARMS page With API</span>
+                            
+                          
+                              <span class="step-duration">
+                               0s
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+
+
+    </div>
+
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+            <div class="text-muted footer-link">
+              generated by @cucumber-html-reporter
+            </div>
+             </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : 1,
+                                                            "passed" : 0,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : 1,
+                                                            "passed" : 4,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+    </script>
+    <script>
+      $(document).ready(function() {
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
+
+    var $generated = $('.generated-on');
+
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
+});
+
+function toggle(className) {
+  var x = $(className);
+  if ( x.css('display') === "none") {
+    x.css('display', 'block');
+  } else {
+    x.css('display', 'none');
+  }
+}
+
+      function drawChart(chartData) {
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Cucumber Results'],
+        ['Passed', chartData.passed],
+        ['Failed', chartData.failed],
+        ['Pending', chartData.pending],
+        ['Undefined', chartData.notdefined],
+        ['Ambiguous', chartData.ambiguous],
+        ['Skipped', chartData.skipped]        
+    ]);
+
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
+    var title;
+
+    if (total === 1) {
+        title = total + ' ' + chartData.title.slice(0, -1)
+    } else {
+        title = total + ' ' + chartData.title;
+    }
+
+    var options = {
+        width: '100%',
+        height: 240,
+        title: title,
+        is3D: true,
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e'],
+        fontSize: '13',
+        fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
+        slices: {
+            1: {offset: 0.4},
+            2: {offset: 0.4},
+            3: {offset: 0.4},
+            4: {offset: 0.4},
+            5: {offset: 0.4},
+            6: {offset: 0.4}
+        },
+        titleTextStyle: {
+            fontSize: '13',
+            color: '#5e5e5e'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
+
+    function selectHandler() {
+      var selectedItem = chart.getSelection()[0];
+      if (selectedItem) {
+        var featureStatus = data.getValue(selectedItem.row, 0);
+        if (featureStatus === 'Passed'){
+            var x = $('.feature-passed');
+        }else{
+            var x = $('.feature-failed');
+        }
+        if (x && x.css('display') === "none") {
+          x.css('display', 'block');
+        } else {
+          x.css('display', 'none');
+        }
+      }
+    }
+    google.visualization.events.addListener(chart, 'select', selectHandler);
+
+    chart.draw(data, options);
+}
+
+      $('a.toggle').on('click', function(e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('collapse')) {
+        if ($(this).text() === 'Screenshot -') {
+            // $(this).text('Screenshot +');
+            $(this).next('a.screenshot').find('img').hide();
+        } else if($(this).text() === 'Screenshot +') {
+            // $(this).text('Screenshot -');
+            $(this).next('a.screenshot').find('img').show();
+        }
+    }
+
+    if ($(this).text().includes(' -')) {
+        $(this).text($(this).text().replace(' -', ' +'));
+    } else {
+        $(this).text($(this).text().replace(' +', ' -'));
+    }
+});
+
+    </script>
+  </body>
+</html>
