@@ -29,9 +29,9 @@ Feature: NG911 automation sanity
 
 
 
-#  @LogoutTime
-#  Feature: NG911 application logout time
-#    Scenario: Get NG911 logout time
-#      Given I open NG911 login page
-#      When I will be on home page
-#      Then I calculate logout time for application with maximum timeout 90 min
+# @LogoutTime
+# Feature: NG911 application logout time
+#   Scenario: Get NG911 logout time
+#     Given I open NG911 login page
+#     When I will be on home page
+#     Then I calculate logout time for application with maximum timeout 90 min
