@@ -1,4 +1,4 @@
-import { Given, Then, And, When } from "./node_modules/cypress-cucumber-preprocessor/steps";
+import { Given, Then, And, When } from "cypress-cucumber-preprocessor/steps";
 import PsapPage from '../PageObjects/PsapPage.js'
 
 
@@ -24,6 +24,7 @@ When('I will be on home page', () => {
     psapPage.validateListTab()
     cy.wait(1000)
     psapPage.validateMapTab()
+    psapPage.getPsapIdsFromServiceMap()
     cy.log('PSAP page validation successful');
   });
   
@@ -39,4 +40,9 @@ When('I will be on home page', () => {
     cy.log('PSAP card details validated successful');
  });
 
+And('I verify Table Data on PSAP page With API', () => {
+  cy.wait(3000)
+  psapPage.verifyPsapDataTable()
+  cy.log('PSAP card details validated successful');
+});
  

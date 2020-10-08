@@ -1,0 +1,77 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "validate scenarios for NGCS page",
+    "line": 1,
+    "id": "validate-scenarios-for-ngcs-page",
+    "tags": [],
+    "uri": "ngcs.feature",
+    "elements": [
+      {
+        "id": "validate-scenarios-for-ngcs-page;validate-ngcs-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "validate ngcs page",
+        "tags": [
+          {
+            "name": "@ngcstest",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open NG911 login page",
+            "result": {
+              "status": "passed",
+              "duration": 25114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I will be on home page",
+            "result": {
+              "status": "passed",
+              "duration": 8666000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page",
+            "result": {
+              "status": "passed",
+              "duration": 3804000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I verify card details on NGCS page With API",
+            "result": {
+              "status": "failed",
+              "duration": 10951000000,
+              "error_message": "AssertionError: Timed out retrying: Expected to find content: '13' within the element: <h4.card-title.-text-info-number> but never did.\n    + expected - actual\n\n\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\ngcs.feature:91:71)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I verify Table Header on NGCS page With API",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
