@@ -23,13 +23,10 @@ class PsapPage {
        if($el.text().includes('1 ')){
         cy.wait(2000)
         
-        const loc="div.chi-popover:nth-child("+ index +") > div[class='chi-popover__arrow']"
-        cy.log(loc);
-        cy.get(loc).invoke('show')
-        cy.wait(5000)
-        cy.get(loc).click('left',{force: true});
+        const loc="div.chi-popover:nth-child("+ index +") > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(2)"
+        //cy.log(loc);
       
-       //cy.contains($el.text()).dblclick('center',{force: true})
+       cy.get(loc).click('center',{force: true})
        
         //cy.wait(2000)
         //cy.get('button.chi-button:nth-child(3) > div:nth-child(1) > i',{timeout:60000}).click()
@@ -118,11 +115,11 @@ class PsapPage {
       expect(response.body).to.not.be.null;
       let psapCount = response.body.psapCount;
       let impactedCount = response.body.psapImpactedCount + ' Impacted';
-      cy.get('.-card--active > .card-body > .card-subtitle').contains('PSAP');
+      cy.get('div.chi-col:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('PSAP');
       cy.log("PSAP count-", psapCount);
-      cy.get('.-card--active > .card-body > .card-title').contains(psapCount);
+      cy.get('div.chi-col:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(psapCount);
       cy.log("PSAP impacted-", impactedCount);
-      cy.get('.-card--active > .card-body > .card-text').contains(impactedCount);
+      cy.get('div.chi-col:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains(impactedCount);
     });
   }
 

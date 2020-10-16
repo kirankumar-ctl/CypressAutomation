@@ -4,12 +4,12 @@ class AlarmsPage {
 
 
   verifyAndClickAlarmsTab() {
-    cy.get('[aria-label="ALARMS Card"]').should('be.visible').click();
+    cy.get('div.chi-col:nth-child(4) > div:nth-child(1) > div:nth-child(1)').should('be.visible').click();
     return this
   }
 
   verifyDataTablePresentAlarms() {
-    cy.get('#list-section > div > div > div > div > div:nth-child(2)').should('be.visible');
+    cy.get('.-fixed--header').should('be.visible');
     return this
   }
 
@@ -51,7 +51,7 @@ class AlarmsPage {
       followRedirect: false,
       log: true,
       url:
-        "https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/ALARMS",
+        "https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/ALARMS_xyz",
       headers: {
         accept: "application/json",
         Authorization: "Bearer " + mtoken,
@@ -62,9 +62,9 @@ class AlarmsPage {
       //cy.log(response.body);
       expect(response.body).to.not.be.null;
       let alarmsCount = response.body.alarmCount;
-      cy.get('[aria-label="ALARMS Card"] > .card-body > .card-subtitle').contains('ALARMS');
+      cy.get('div.chi-col:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('ALARMS');
       cy.log("ALARMS count-", alarmsCount);
-      cy.get('[aria-label="ALARMS Card"] > .card-body > .card-title').contains(alarmsCount);
+      cy.get('div.chi-col:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(alarmsCount);
 
     });
   }

@@ -32,7 +32,7 @@
             "name": "I open NG911 login page",
             "result": {
               "status": "passed",
-              "duration": 15608000000
+              "duration": 19944000000
             }
           },
           {
@@ -42,7 +42,7 @@
             "name": "I will be on home page",
             "result": {
               "status": "passed",
-              "duration": 8334000000
+              "duration": 9866000000
             }
           }
         ]
@@ -67,7 +67,7 @@
             "name": "I verify List and Map tab on PSAP page",
             "result": {
               "status": "passed",
-              "duration": 10119000000
+              "duration": 10008000000
             }
           },
           {
@@ -76,8 +76,9 @@
             "line": 10,
             "name": "I verify card details on PSAP page With API",
             "result": {
-              "status": "passed",
-              "duration": 7304000000
+              "status": "failed",
+              "duration": 33180000000,
+              "error_message": "CypressError: `cy.request()` timed out waiting `30000ms` for a response from your server.\n\nThe request we sent was:\n\nMethod: GET\nURL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/PSAP\n\nNo response was received within the timeout.\n\nhttps://on.cypress.io/request\n    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:159190:19\n    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)\n    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at PsapPage.verifyPsapCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:459:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:768:12)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11169:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10511:35)\nFrom Your Spec Code:\n    at PsapPage.verifyPsapCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:459:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:768:12)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11169:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10511:35)"
             }
           },
           {
@@ -86,8 +87,7 @@
             "line": 11,
             "name": "I verify Table Header on PSAP page With API",
             "result": {
-              "status": "passed",
-              "duration": 8323000000
+              "status": "skipped"
             }
           }
         ]
@@ -112,7 +112,7 @@
             "name": "I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page",
             "result": {
               "status": "passed",
-              "duration": 4212000000
+              "duration": 4967000000
             }
           },
           {
@@ -122,7 +122,7 @@
             "name": "I verify card details on NGCS page With API",
             "result": {
               "status": "passed",
-              "duration": 4016000000
+              "duration": 4846000000
             }
           },
           {
@@ -132,7 +132,7 @@
             "name": "I verify Table Header on NGCS page With API",
             "result": {
               "status": "passed",
-              "duration": 3225000000
+              "duration": 2578000000
             }
           }
         ]
@@ -157,7 +157,7 @@
             "name": "I verify Gateways, SBCs Tabs and data table present on INGRESS page",
             "result": {
               "status": "passed",
-              "duration": 5012000000
+              "duration": 5258000000
             }
           },
           {
@@ -167,7 +167,7 @@
             "name": "I verify card details on INGRESS page With API",
             "result": {
               "status": "passed",
-              "duration": 3946000000
+              "duration": 3860000000
             }
           },
           {
@@ -177,7 +177,7 @@
             "name": "I verify Table Header on INGRESS page With API",
             "result": {
               "status": "passed",
-              "duration": 2738000000
+              "duration": 2599000000
             }
           }
         ]
@@ -202,7 +202,7 @@
             "name": "I verify data table present on ALARMS page",
             "result": {
               "status": "passed",
-              "duration": 5272000000
+              "duration": 4851000000
             }
           },
           {
@@ -211,8 +211,9 @@
             "line": 25,
             "name": "I verify card details on ALARMS page With API",
             "result": {
-              "status": "passed",
-              "duration": 5416000000
+              "status": "failed",
+              "duration": 3558000000,
+              "error_message": "CypressError: `cy.request()` failed on:\n\nhttps://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/ALARMS_xyz\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/ALARMS_xyz\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"accept\": \"application/json\",\n  \"Authorization\": \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjdmNTRkMjcxLTU5N2YtNDQ3ZS04YzJlLTRiYTY4MjU1YmMzMSJ9.eyJpc3MiOiJBUFBLRVk3NTY3NTIwMjAwMTEwMTU1OTQ5NTg2MTExMjc0IiwiZW50ZXJwcmlzZSI6Ijk0ODEiLCJqdGkiOiJmM2IzMjUxMC03ZTEwLTQ1YzUtYmNkMy04ZWFjYjE1NGI2YTgiLCJzdWIiOiJrb2hsc0BlbnYxLmNvbSIsInVzZXJuYW1lIjoia29obHNAZW52MS5jb20iLCJuYW1lIjoiS29obHMgS29obHMiLCJhY2Nlc3NfdHlwZSI6ImFjY2Vzc190b2tlbiIsImVudiI6ImVudjEiLCJ1aWQiOiIxMTkxNTkyMSIsInR5cGUiOiJlbnRlcnByaXNlIiwiaWF0IjoxNjAyNjcyOTIxLCJleHAiOjE2MDI2NzMyMjF9.VCjtB0_bseEUAT8anVfhsMAfffi1Ptwa13FSEtnsp0sVo05Hp7IBk9Ij-oFLxwRR70Wq8pBErQGmqrzrwwZY7-3nVcjz4TQ3GCuJ6ptd066vJmOar10YcqRM8RcH63gAJoouRrgjhV902BNibB7K_l1bOR4fNSJi5_n4GWfHQDqqzlW76HT1hIwcgf-K3m7fP_7HHMt_kdaE1499jE-FvlNVrTUQiyqDcdm6IGnEZlfKGB0KTfmWqFfbolU5PyVNBcSnzybIFph3Zdd2du1KSOFWEuqy84jApuEj-WKqH0hS3Xn7BurpcEoNTavB4xcHKouJCtYYfz7Ajp4BC-_r7CSdHU08ME-zrNku_eVVbi5eE0XL08j5cuHA1qab2yZSy4iyYCwSQF_UXiC62cK-iognGH7MOGadqYNKrphQL_9EWCeL91BwX4_qAOJA-d3KKMVhf8ydcnEzq5cEO7KCKPJBmJsaRi-qyWqgJk11rzAIT4OOwDF2t2O5SUpKggCgnYdXT4TnFGy_rD1-4p3TU_9ay75yXs-U8RoqCQqoftbULoGmjFXEF5_Rr7J1kS-QEipiERrYrmn8U7nlaNkp6BumjowHWEDXbhdRyTqqrAPr6RF4YUtwNaWnVSN5XCt9jEAQMzS5vF7XstiRI_XgQ8dV-W8FT7m-6cHaTADUhKU\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/5.1.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 400 - Bad Request\nHeaders: {\n  \"date\": \"Wed, 14 Oct 2020 10:57:06 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"server\": \"nginx/1.17.6\",\n  \"vary\": \"Origin, Access-Control-Request-Method, Access-Control-Request-Headers\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"DENY\",\n  \"x-level3-mediation-id\": \"ME-apigeeidc17test6129369343473\",\n  \"access-control-allow-origin\": \"*\",\n  \"trackingid\": \"21d87ace-4909-93b7-c575-e4923e836e97\"\n}\nBody: {\n  \"timestamp\": 1602673026755,\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"\",\n  \"path\": \"/api/v1/refresh/ALARMS_xyz\"\n}\n\n\nhttps://on.cypress.io/request\n    at https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:159172:21\n    at tryCatcher (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:8442:18)\n    at _drainQueueStep (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:61:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:663:14)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11169:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10511:35)\nFrom Your Spec Code:\n    at AlarmsPage.verifyAlarmsCardDetails (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:61:10)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:663:14)\n    at Context.resolveAndRunStepDefinition (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:11169:9)\n    at Context.eval (https://nginx-master-po-ng911.kubeodc-test.corp.intranet/__cypress/tests?p=cypress\\integration\\sanity.feature:10511:35)"
             }
           },
           {
@@ -221,8 +222,7 @@
             "line": 26,
             "name": "I verify Table Header on ALARMS page With API",
             "result": {
-              "status": "passed",
-              "duration": 12529000000
+              "status": "skipped"
             }
           }
         ]

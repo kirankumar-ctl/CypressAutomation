@@ -24,7 +24,7 @@ When('I will be on home page', () => {
     psapPage.validateListTab()
     cy.wait(1000)
     psapPage.validateMapTab()
-    psapPage.getPsapIdsFromServiceMap()
+    //psapPage.getPsapIdsFromServiceMap()
     cy.log('PSAP page validation successful');
   });
   

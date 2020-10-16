@@ -25,15 +25,15 @@ class IngressPage {
       expect(response.body).to.not.be.null;
       let ingressCount = response.body.ingressCount;
       let impactedCount = response.body.ingressImpactedCount + ' Impacted';
-      cy.get('[aria-label="INGRESS Card"] > .card-body > .card-subtitle').contains('INGRESS');
+      cy.get('div.-active:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('INGRESS');
       cy.log("ingress count-", ingressCount);
-      cy.get('[aria-label="INGRESS Card"] > .card-body > .card-title').contains(ingressCount);
+      cy.get('div.chi-col:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(ingressCount);
       cy.log("ingress impacted-", impactedCount);
-      cy.get('[aria-label="INGRESS Card"] > .card-body > .card-text').contains(impactedCount);
+      cy.get('div.-active:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains(impactedCount);
     });
   }
   verifyAndClickIngressTab() {
-    cy.get('[aria-label="INGRESS Card"]').should('be.visible').click();
+    cy.get('div.chi-col:nth-child(3) > div:nth-child(1) > div:nth-child(1)').should('be.visible').click();
     return this
   }
   verifyIngressGatewaysTab() {

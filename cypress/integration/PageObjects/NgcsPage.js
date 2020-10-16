@@ -3,12 +3,12 @@
 class NgcsPage {
 
   verifyAndClickNgcsTab() {
-    cy.get('[aria-label="NGCS Card"]').should('be.visible').click();
+    cy.get(':nth-child(2) > .chi-stat > .chi-stat__content').should('be.visible').click();
     return this
   }
 
   verifyNgcsCore() {
-    cy.get('#core-device-tab > li.-active > a').should('be.visible').and('have.text', 'NGCS Core');
+    cy.get('#core-device-tab > li:nth-child(1) > a:nth-child(1)').should('be.visible').and('have.text', 'NGCS Core');
     cy.log('Ngcs core tab is visible')
   }
   verifyNgcsCoreDevices() {
@@ -17,7 +17,7 @@ class NgcsPage {
   }
 
   verifyNgcsComponentStatus() {
-    cy.get(':nth-child(2) > .-p--0').should('be.visible').and('have.text', 'Component Status');
+    cy.get('#core-device-tab > li:nth-child(2) > a:nth-child(1)').should('be.visible').and('have.text', 'Component Status');
     cy.log('NGCS Component Status tab is visible')
   }
 
@@ -70,11 +70,11 @@ class NgcsPage {
       expect(response.body).to.not.be.null;
       let ngcsCount = response.body.ngcsCount;
       let impactedCount = response.body.ngcsImpactedCount + ' Impacted';
-      cy.get('.-card--active > .card-body > .card-subtitle').contains('NGCS');
+      cy.get('div.chi-col:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('NGCS');
       cy.log("NGCS count-", ngcsCount);
-      cy.get('[aria-label="NGCS Card"] > .card-body > .card-title').contains(ngcsCount);
+      cy.get('div.chi-col:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(ngcsCount);
       cy.log("NGCS impacted-", impactedCount);
-      cy.get('.-card--active > .card-body > .card-text').contains(impactedCount);
+      cy.get('div.chi-col:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains(impactedCount);
     });
   }
 

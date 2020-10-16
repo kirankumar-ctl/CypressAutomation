@@ -1,15 +1,14 @@
 {
-    "chromeWebSecurity": false,
-    "defaultCommandTimeout":5000,
-    "experimentalFetchPolyfill": true,
-    "testFiles": "**/*.feature",
-
-    "cucumberautocomplete.steps": [
-        "cypress/integration/sanity/*.steps.js"   
-    ],
-    "cucumberautocomplete.syncfeatures": "**/*.feature",
-    "cucumberautocomplete.strictGherkinCompletion": true,
-    "cucumberautocomplete.smartSnippets": true,
-    "cucumberautocomplete.stepsInvariants": false
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 5000,
+  "experimentalFetchPolyfill": true,
+  "testFiles": "**/*.feature",
+  "cucumberautocomplete.steps": [
+    "cypress/integration/sanity/*.steps.js"
+  ],
+  "cucumberautocomplete.syncfeatures": "**/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": false,
+  "projectId": "va5uq7"
 }
-
