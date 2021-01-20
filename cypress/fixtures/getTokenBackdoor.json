@@ -1,6 +1,6 @@
 {
   "url": "https://beta-auth.enterprise.ctl.io/backdoor/token?dont-verify&env=env1",
   "schema": "http://elasticbox.net/schemas/token-request",
-  "uid": "11915921",
+  "uid": "9481",
   "type": "enterprise"
 }

@@ -51,7 +51,7 @@ class AlarmsPage {
       followRedirect: false,
       log: true,
       url:
-        "https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/ALARMS_xyz",
+        "https://api-dev1.centurylink.com/DataServices/v1/PublicSafety/ng911/refresh/ALARMS",
       headers: {
         accept: "application/json",
         Authorization: "Bearer " + mtoken,
@@ -62,9 +62,9 @@ class AlarmsPage {
       //cy.log(response.body);
       expect(response.body).to.not.be.null;
       let alarmsCount = response.body.alarmCount;
-      cy.get('div.chi-col:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('ALARMS');
+      cy.get(':nth-child(4) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > .chi-stat-metric__title').contains('ALARMS');
       cy.log("ALARMS count-", alarmsCount);
-      cy.get('div.chi-col:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(alarmsCount);
+      cy.get(':nth-child(4) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > div.chi-stat-metric__value').contains(alarmsCount);
 
     });
   }

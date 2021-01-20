@@ -6,27 +6,28 @@ class PsapPage {
     const statTime = Cypress.moment().format('HH:MM:SS')
     cy.log('start time--', statTime);
 
-    cy.get(':nth-child(2) > a > .-ml--0').should('be.visible').and('have.text', 'List');
+    cy.get('.menu-items > :nth-child(1) > .chi-card__tabs > .chi-tabs > :nth-child(2) > a').should('be.visible').and('have.text', 'List');
     return this
   }
 
   validateMapTab() {
-    cy.get('.-active > a > .-ml--0').should('be.visible').and('have.text', 'Map');
+    cy.get('.menu-items > :nth-child(1) > .chi-card__tabs > .chi-tabs > .-active > a').should('be.visible').and('have.text', 'Map');
     return this
   }
 
   getPsapIdsFromServiceMap(){
     //cy.get('div.chi-popover:nth-child(6) > div:nth-child(1) > div:nth-child(1)').click({force: true})
     cy.get('div.chi-popover',{timeout:60000}).each(($el, index, $list) => {
-        index=index+1;
+        index=index+2;
       cy.log(index +'--  '+ $el.text())
        if($el.text().includes('1 ')){
         cy.wait(2000)
         
-        const loc="div.chi-popover:nth-child("+ index +") > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(2)"
+        //const loc="div.chi-popover:nth-child("+ index +") > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(2)"
         //cy.log(loc);
-      
-       cy.get(loc).click('center',{force: true})
+        const loc="#googleMapRef > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div:nth-child("+ index +")"
+        //cy.wait(20000)
+       //cy.get(loc).click('center',{force: true})
        
         //cy.wait(2000)
         //cy.get('button.chi-button:nth-child(3) > div:nth-child(1) > i',{timeout:60000}).click()
@@ -115,16 +116,15 @@ class PsapPage {
       expect(response.body).to.not.be.null;
       let psapCount = response.body.psapCount;
       let impactedCount = response.body.psapImpactedCount + ' Impacted';
-      cy.get('div.chi-col:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('PSAP');
+      cy.get(':nth-child(1) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > .chi-stat-metric__title').contains('PSAP');
       cy.log("PSAP count-", psapCount);
-      cy.get('div.chi-col:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(psapCount);
+      cy.get(':nth-child(1) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > div.chi-stat-metric__value').contains(psapCount);
       cy.log("PSAP impacted-", impactedCount);
-      cy.get('div.chi-col:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains(impactedCount);
+      cy.get(':nth-child(1) > .-center > .chi-stat__content > #content-div-regular > div.chi-stat-submetric').contains(impactedCount);
     });
   }
 
-
-
+  
 }
 export default PsapPage
 

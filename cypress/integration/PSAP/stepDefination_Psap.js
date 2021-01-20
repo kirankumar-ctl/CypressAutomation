@@ -24,7 +24,7 @@ When('I will be on home page', () => {
     psapPage.validateListTab()
     cy.wait(1000)
     psapPage.validateMapTab()
-    //psapPage.getPsapIdsFromServiceMap()
+    psapPage.getPsapIdsFromServiceMap()
     cy.log('PSAP page validation successful');
   });
   
@@ -42,7 +42,8 @@ When('I will be on home page', () => {
 
 And('I verify Table Data on PSAP page With API', () => {
   cy.wait(3000)
-  psapPage.verifyPsapDataTable()
+  psapPage.verifyPsapDataTable_UI()
+  psapPage.verifyPsapDataTable_API()
   cy.log('PSAP card details validated successful');
 });
  

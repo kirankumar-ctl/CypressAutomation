@@ -25,11 +25,11 @@ class IngressPage {
       expect(response.body).to.not.be.null;
       let ingressCount = response.body.ingressCount;
       let impactedCount = response.body.ingressImpactedCount + ' Impacted';
-      cy.get('div.-active:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('INGRESS');
+      cy.get(':nth-child(3) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > .chi-stat-metric__title').contains('INGRESS');
       cy.log("ingress count-", ingressCount);
-      cy.get('div.chi-col:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(ingressCount);
+      cy.get(':nth-child(3) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > div.chi-stat-metric__value').contains(ingressCount);
       cy.log("ingress impacted-", impactedCount);
-      cy.get('div.-active:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains(impactedCount);
+      cy.get(':nth-child(3) > .-center > .chi-stat__content > #content-div-regular > div.chi-stat-submetric').contains(impactedCount);
     });
   }
   verifyAndClickIngressTab() {

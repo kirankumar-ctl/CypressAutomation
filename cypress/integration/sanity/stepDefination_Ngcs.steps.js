@@ -10,7 +10,7 @@ Then('I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page', (
   cy.wait(1000)
   ngcsPage.verifyNgcsCore()
   cy.wait(1000)
-  ngcsPage.verifyNgcsCoreDevices()
+  ngcsPage.verifyNgcsCoreFunctions()
   ngcsPage.verifyNgcsComponentStatus()
   cy.log('NGCS page validation successful');
 });

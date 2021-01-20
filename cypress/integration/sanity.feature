@@ -8,22 +8,22 @@ Feature: NG911 automation sanity
   Scenario: validate PSAP page and there APIs
     Then I verify List and Map tab on PSAP page
     And I verify card details on PSAP page With API
-    And I verify Table Header on PSAP page With API
+    #And I verify Table Header on PSAP page With API
 
   Scenario: validate NGCS page and there APIs
     Then I verify NgcsCore,ComponentStatus and NgcsCoreDevices tab on NGCS page
     And I verify card details on NGCS page With API
-    And I verify Table Header on NGCS page With API
+    #And I verify Table Header on NGCS page With API
 
   Scenario: validate INGRESS page and there APIs
     Then I verify Gateways, SBCs Tabs and data table present on INGRESS page
     And I verify card details on INGRESS page With API
-    And I verify Table Header on INGRESS page With API
+    #And I verify Table Header on INGRESS page With API
 
   Scenario: validate ALARMS page and there APIs
     Then I verify data table present on ALARMS page
     And I verify card details on ALARMS page With API
-    And I verify Table Header on ALARMS page With API
+    #And I verify Table Header on ALARMS page With API
 
 
 

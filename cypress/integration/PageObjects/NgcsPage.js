@@ -11,8 +11,8 @@ class NgcsPage {
     cy.get('#core-device-tab > li:nth-child(1) > a:nth-child(1)').should('be.visible').and('have.text', 'NGCS Core');
     cy.log('Ngcs core tab is visible')
   }
-  verifyNgcsCoreDevices() {
-    cy.get('#core-device-tab > li:nth-child(3) > a:nth-child(1)').should('be.visible').and('have.text', 'Core Devices')
+  verifyNgcsCoreFunctions() {
+    cy.get('#core-device-tab > li:nth-child(3) > a:nth-child(1)').should('be.visible').and('have.text', 'Core Functions')
     cy.log('Ngcs core devices tab is visible')
   }
 
@@ -70,11 +70,11 @@ class NgcsPage {
       expect(response.body).to.not.be.null;
       let ngcsCount = response.body.ngcsCount;
       let impactedCount = response.body.ngcsImpactedCount + ' Impacted';
-      cy.get('div.chi-col:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains('NGCS');
+      cy.get(':nth-child(2) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > .chi-stat-metric__title').contains('NGCS');
       cy.log("NGCS count-", ngcsCount);
-      cy.get('div.chi-col:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)').contains(ngcsCount);
+      cy.get(':nth-child(2) > .-center > .chi-stat__content > #content-div-regular > .chi-stat-metric > div.chi-stat-metric__value').contains(ngcsCount);
       cy.log("NGCS impacted-", impactedCount);
-      cy.get('div.chi-col:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)').contains(impactedCount);
+      cy.get(':nth-child(2) > .-center > .chi-stat__content > #content-div-regular > div.chi-stat-submetric').contains(impactedCount);
     });
   }
 
