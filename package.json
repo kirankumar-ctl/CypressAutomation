@@ -6,7 +6,7 @@
   "scripts": {
     "clean:reports": "rmdir /S /Q reports\\cucumber-json && rmdir /S /Q reports\\html_simple",
     "pretest": "",
-    "scripts": "cypress-tags run -e TAGS=@ng911sanity --headed",
+    "scripts": "cypress-tags run -e TAGS=@Test_FFP-27695  --headed",
     "posttest": "node cypress/support/cucumber-reports.js",
     "test": "npm run scripts || npm run posttest"
   },

@@ -5,7 +5,7 @@
     "line": 1,
     "id": "validate-scenarios-for-psap-page",
     "tags": [],
-    "uri": "psap.feature",
+    "uri": "psapRegression.feature",
     "elements": [
       {
         "id": "validate-scenarios-for-psap-page;tc1_psap_verify-if-psap-card-should-be-display-on-ng911-dashboard",
@@ -26,8 +26,8 @@
             "line": 13,
             "name": "I open NG911 login page",
             "result": {
-              "status": "passed",
-              "duration": 10250000000
+              "status": "undefined",
+              "duration": 192000000
             }
           },
           {
@@ -36,8 +36,7 @@
             "line": 14,
             "name": "I will be on home page",
             "result": {
-              "status": "passed",
-              "duration": 9632000000
+              "status": "skipped"
             }
           },
           {
@@ -46,8 +45,7 @@
             "line": 15,
             "name": "I verify PSAP card shuld display on dashboard",
             "result": {
-              "status": "passed",
-              "duration": 3156000000
+              "status": "skipped"
             }
           }
         ]

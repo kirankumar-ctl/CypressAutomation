@@ -46,4 +46,8 @@ And('I verify Table Data on PSAP page With API', () => {
   psapPage.verifyPsapDataTable_API()
   cy.log('PSAP card details validated successful');
 });
- 
+
+Then('I verify PSAP card shuld display on dashboard', () => {
+  cy.wait(3000)
+  psapPage.validatePsapCard()
+});

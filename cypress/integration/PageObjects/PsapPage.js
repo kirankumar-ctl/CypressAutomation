@@ -3,11 +3,14 @@
 class PsapPage {
 
   validateListTab() {
-    const statTime = Cypress.moment().format('HH:MM:SS')
-    cy.log('start time--', statTime);
-
+    //const statTime = Cypress.moment().format('HH:MM:SS')
+    //cy.log('start time--', statTime);
     cy.get('.menu-items > :nth-child(1) > .chi-card__tabs > .chi-tabs > :nth-child(2) > a').should('be.visible').and('have.text', 'List');
     return this
+  }
+
+  validatePsapCard(){
+    cy.get(':nth-child(1) > .-center > .chi-stat__content').should('be.visible');
   }
 
   validateMapTab() {
