@@ -1,4 +1,4 @@
-@ng911sanity
+@Test_FFP-27904
 Feature: NG911 automation sanity
 
   Scenario: Login in NG911 app and validate home page
