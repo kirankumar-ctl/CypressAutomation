@@ -14,3 +14,8 @@ Feature: validate scenarios for PSAP page
     When I will be on home page
     Then I verify PSAP card shuld display on dashboard
 
+@TEST_FFP-27696
+  Scenario: TC2_PSAP_Verify if PSAP count should be display on PSAP card
+    Given I open NG911 login page
+    When I will be on home page
+    Then I verify PSAP count should be display on PSAP card
