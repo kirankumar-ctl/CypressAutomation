@@ -1,6 +1,6 @@
 @ng911sanity
 Feature: NG911 automation sanity
-  @Test_FFP-27904
+  @TEST_FFP-27904
   Scenario: Login in NG911 app and validate home page
     Given I open NG911 login page
     When I will be on home page
